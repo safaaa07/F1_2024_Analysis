@@ -3,7 +3,7 @@
 
 ## Overview
 This project provides an in-depth analysis of the **2024 Formula 1 season** using **Python** and the **FastF1** library. The goal is to break down key statistics, race results, and performance trends through **data visualizations and insights**.<br>
-Using **official telemetry and session data**, this notebook covers:
+Using **official telemetry and session data**, this notebook covers:<br>
 ✅ Race and sprint locations 📍<br>
 ✅ Driver & team performances 🏆<br>
 ✅ Lap times, fastest laps, and consistency metrics ⏱️<br>
