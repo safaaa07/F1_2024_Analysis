@@ -2,19 +2,19 @@
 📊 A Data-Driven Analysis Using FastF1
 
 ## Overview
-This project provides an in-depth analysis of the **2024 Formula 1 season** using **Python** and the **FastF1** library. The goal is to break down key statistics, race results, and performance trends through **data visualizations and insights**.
+This project provides an in-depth analysis of the **2024 Formula 1 season** using **Python** and the **FastF1** library. The goal is to break down key statistics, race results, and performance trends through **data visualizations and insights**.<br>
 Using **official telemetry and session data**, this notebook covers:
-✅ Race and sprint locations 📍
-✅ Driver & team performances 🏆
-✅ Lap times, fastest laps, and consistency metrics ⏱️
-✅ DNFs and their causes ❌
-✅ Impact of weather on race outcomes 🌦️
+✅ Race and sprint locations 📍<br>
+✅ Driver & team performances 🏆<br>
+✅ Lap times, fastest laps, and consistency metrics ⏱️<br>
+✅ DNFs and their causes ❌<br>
+✅ Impact of weather on race outcomes 🌦️<br>
 
 ## Data Source & Tools
-**FastF1** 🏎️ – Official F1 data retrieval (session results, telemetry, weather, etc.).
-**Pandas** 🐍 – Data manipulation and analysis.
-**Matplotlib & Seaborn** 📊 – Data visualization.
-**Plotly** 🎨 – Interactive charts.
+**FastF1** 🏎️ – Official F1 data retrieval (session results, telemetry, weather, etc.).<br>
+**Pandas** 🐍 – Data manipulation and analysis.<br>
+**Matplotlib & Seaborn** 📊 – Data visualization.<br>
+**Plotly** 🎨 – Interactive charts.<br>
 **Folium** 🗺️ – Mapping race & sprint locations.
 
 ## How to Run this Notebook
@@ -70,7 +70,7 @@ Some possible enhancements:
 - Interactive dashboard integration.
 
 ## Author & Contact
-🔗 **GitHub:** [Safaa Allamy](https://github.com/safaaa07)
-📧 **Email:** [allamy.safaa@gmail.com](mailto:allamy.safaa@gmail.com)
-💼 **LinkedIn:** [Safaa Allamy](https://www.linkedin.com/in/safaa-allamy/)
+🔗 **GitHub:** [Safaa Allamy](https://github.com/safaaa07)<br>
+📧 **Email:** [allamy.safaa@gmail.com](mailto:allamy.safaa@gmail.com)<br>
+💼 **LinkedIn:** [Safaa Allamy](https://www.linkedin.com/in/safaa-allamy/)<br>
 🚀 If you find this project interesting, feel free to star ⭐ the repository and share your thoughts!
