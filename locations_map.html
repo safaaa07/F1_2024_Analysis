@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_69bbdc26a9579cdf7c22fd4444fb1b84 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed; 
+    bottom: 30px; left: 30px; width: 150px; height: 90px; 
+    background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+    padding: 10px;">
+    <b>Legend</b><br>
+    <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Race<br>
+    <i style="background:green; width:10px; height:10px; display:inline-block;"></i> Race + Sprint
+</div>
+    
+            <div class="folium-map" id="map_69bbdc26a9579cdf7c22fd4444fb1b84" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_69bbdc26a9579cdf7c22fd4444fb1b84 = L.map(
+                "map_69bbdc26a9579cdf7c22fd4444fb1b84",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d96a7e97f6a1b8101cd992807d32e3e9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d96a7e97f6a1b8101cd992807d32e3e9.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+    
+            var feature_group_079bd85861b6034fd23ec6c3f212eef8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_df4108901a15106f3906cca8f53daaca = L.circleMarker(
+                [26.03169845, 50.51452074628078],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_cfca8cb6ba7f112d146177c4e70e79c0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05e6e4f666657e3fb3d9e9508027f435 = $(`<div id="html_05e6e4f666657e3fb3d9e9508027f435" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Bahrain<br>     <b>City:</b> Sakhir<br>     <b>Official Event Name:</b> FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2024<br>     <b>Date:</b> 2024-03-02 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_cfca8cb6ba7f112d146177c4e70e79c0.setContent(html_05e6e4f666657e3fb3d9e9508027f435);
+            
+        
+
+        circle_marker_df4108901a15106f3906cca8f53daaca.bindPopup(popup_cfca8cb6ba7f112d146177c4e70e79c0)
+        ;
+
+        
+    
+    
+            circle_marker_df4108901a15106f3906cca8f53daaca.bindTooltip(
+                `<div>
+                     Sakhir (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9223f336a3b5ebb17be99c54ccc51666 = L.circleMarker(
+                [21.5504432, 39.1742363],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_ac87a0d86df61a9fa99ce1f2db8dc62f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93e8d6106df5f9ee7ed0d1d53d71a064 = $(`<div id="html_93e8d6106df5f9ee7ed0d1d53d71a064" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Saudi Arabia<br>     <b>City:</b> Jeddah<br>     <b>Official Event Name:</b> FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-03-09 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_ac87a0d86df61a9fa99ce1f2db8dc62f.setContent(html_93e8d6106df5f9ee7ed0d1d53d71a064);
+            
+        
+
+        circle_marker_9223f336a3b5ebb17be99c54ccc51666.bindPopup(popup_ac87a0d86df61a9fa99ce1f2db8dc62f)
+        ;
+
+        
+    
+    
+            circle_marker_9223f336a3b5ebb17be99c54ccc51666.bindTooltip(
+                `<div>
+                     Jeddah (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5742a47ecc6fb59d9ac2a93f4d30a68 = L.circleMarker(
+                [-37.8136, 144.9631],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_572f02bd435a7fdb2b5bc8b97eaaed18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ded168183ea8b5e5a83722c6ca0fb812 = $(`<div id="html_ded168183ea8b5e5a83722c6ca0fb812" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Australia<br>     <b>City:</b> Melbourne<br>     <b>Official Event Name:</b> FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-03-24 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_572f02bd435a7fdb2b5bc8b97eaaed18.setContent(html_ded168183ea8b5e5a83722c6ca0fb812);
+            
+        
+
+        circle_marker_c5742a47ecc6fb59d9ac2a93f4d30a68.bindPopup(popup_572f02bd435a7fdb2b5bc8b97eaaed18)
+        ;
+
+        
+    
+    
+            circle_marker_c5742a47ecc6fb59d9ac2a93f4d30a68.bindTooltip(
+                `<div>
+                     Melbourne (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17d9b03b4a82801e920f90b1fa999786 = L.circleMarker(
+                [34.8817102, 136.5836516],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_1e9795b577027cc19135f954d00e5c7c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8b2add0a8a34aa12479d677b05da530 = $(`<div id="html_b8b2add0a8a34aa12479d677b05da530" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Japan<br>     <b>City:</b> Suzuka<br>     <b>Official Event Name:</b> FORMULA 1 MSC CRUISES JAPANESE GRAND PRIX 2024<br>     <b>Date:</b> 2024-04-07 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_1e9795b577027cc19135f954d00e5c7c.setContent(html_b8b2add0a8a34aa12479d677b05da530);
+            
+        
+
+        circle_marker_17d9b03b4a82801e920f90b1fa999786.bindPopup(popup_1e9795b577027cc19135f954d00e5c7c)
+        ;
+
+        
+    
+    
+            circle_marker_17d9b03b4a82801e920f90b1fa999786.bindTooltip(
+                `<div>
+                     Suzuka (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d07d123acff40c962c28b38fd5f18130 = L.circleMarker(
+                [44.3535145, 11.7141233],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_3b5958181da6434da3601efded56fd02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8b664bfed955c9472dba9588c7ab5c6 = $(`<div id="html_e8b664bfed955c9472dba9588c7ab5c6" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Italy<br>     <b>City:</b> Imola<br>     <b>Official Event Name:</b> FORMULA 1 MSC CRUISES GRAN PREMIO DEL MADE IN ITALY E DELL'EMILIA-ROMAGNA 2024<br>     <b>Date:</b> 2024-05-19 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_3b5958181da6434da3601efded56fd02.setContent(html_e8b664bfed955c9472dba9588c7ab5c6);
+            
+        
+
+        circle_marker_d07d123acff40c962c28b38fd5f18130.bindPopup(popup_3b5958181da6434da3601efded56fd02)
+        ;
+
+        
+    
+    
+            circle_marker_d07d123acff40c962c28b38fd5f18130.bindTooltip(
+                `<div>
+                     Imola (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7f15718253ba8050c86ff33e1989aaa = L.circleMarker(
+                [43.7323492, 7.4276832],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_b4bb73763c2b8d5077e4c06ab876dc34 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1534ea30f7bc676a8e637e13da41f397 = $(`<div id="html_1534ea30f7bc676a8e637e13da41f397" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Monaco<br>     <b>City:</b> Monaco<br>     <b>Official Event Name:</b> FORMULA 1 GRAND PRIX DE MONACO 2024<br>     <b>Date:</b> 2024-05-26 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_b4bb73763c2b8d5077e4c06ab876dc34.setContent(html_1534ea30f7bc676a8e637e13da41f397);
+            
+        
+
+        circle_marker_e7f15718253ba8050c86ff33e1989aaa.bindPopup(popup_b4bb73763c2b8d5077e4c06ab876dc34)
+        ;
+
+        
+    
+    
+            circle_marker_e7f15718253ba8050c86ff33e1989aaa.bindTooltip(
+                `<div>
+                     Monaco (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b02ee763bf4acf237a315214575c956 = L.circleMarker(
+                [45.5031824, -73.5698065],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_2ff7bc64234842eeb7b70659d2b2b68f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42f9532796aa5ed3ccea04f4aabdb6f7 = $(`<div id="html_42f9532796aa5ed3ccea04f4aabdb6f7" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Canada<br>     <b>City:</b> Montréal<br>     <b>Official Event Name:</b> FORMULA 1 AWS GRAND PRIX DU CANADA 2024<br>     <b>Date:</b> 2024-06-09 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_2ff7bc64234842eeb7b70659d2b2b68f.setContent(html_42f9532796aa5ed3ccea04f4aabdb6f7);
+            
+        
+
+        circle_marker_1b02ee763bf4acf237a315214575c956.bindPopup(popup_2ff7bc64234842eeb7b70659d2b2b68f)
+        ;
+
+        
+    
+    
+            circle_marker_1b02ee763bf4acf237a315214575c956.bindTooltip(
+                `<div>
+                     Montréal (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_204a4198b160386621bbe710738c7a27 = L.circleMarker(
+                [41.3828939, 2.1774322],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_c6f8256e7f3520e0e54033c9e92597e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fad9648338fc31cc2fb75d44ca3a9847 = $(`<div id="html_fad9648338fc31cc2fb75d44ca3a9847" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Spain<br>     <b>City:</b> Barcelona<br>     <b>Official Event Name:</b> FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2024<br>     <b>Date:</b> 2024-06-23 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_c6f8256e7f3520e0e54033c9e92597e4.setContent(html_fad9648338fc31cc2fb75d44ca3a9847);
+            
+        
+
+        circle_marker_204a4198b160386621bbe710738c7a27.bindPopup(popup_c6f8256e7f3520e0e54033c9e92597e4)
+        ;
+
+        
+    
+    
+            circle_marker_204a4198b160386621bbe710738c7a27.bindTooltip(
+                `<div>
+                     Barcelona (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0fa1aabf809016d2233464343aabfa6 = L.circleMarker(
+                [52.0877287, -1.0241177],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_c394ffdde7d6056ab831ad43aaf70331 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f647833ded91793d14f45c6a29082511 = $(`<div id="html_f647833ded91793d14f45c6a29082511" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> United Kingdom<br>     <b>City:</b> Silverstone<br>     <b>Official Event Name:</b> FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2024<br>     <b>Date:</b> 2024-07-07 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_c394ffdde7d6056ab831ad43aaf70331.setContent(html_f647833ded91793d14f45c6a29082511);
+            
+        
+
+        circle_marker_d0fa1aabf809016d2233464343aabfa6.bindPopup(popup_c394ffdde7d6056ab831ad43aaf70331)
+        ;
+
+        
+    
+    
+            circle_marker_d0fa1aabf809016d2233464343aabfa6.bindTooltip(
+                `<div>
+                     Silverstone (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3040d4d4bbeeac57c0e611b1b216e58 = L.circleMarker(
+                [47.4979, 19.0402],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_325c72afe4c6b90c46c4253b60701e08 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18192353e4c3eec0439611142c85e7f5 = $(`<div id="html_18192353e4c3eec0439611142c85e7f5" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Hungary<br>     <b>City:</b> Budapest<br>     <b>Official Event Name:</b> FORMULA 1 HUNGARIAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-07-21 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_325c72afe4c6b90c46c4253b60701e08.setContent(html_18192353e4c3eec0439611142c85e7f5);
+            
+        
+
+        circle_marker_f3040d4d4bbeeac57c0e611b1b216e58.bindPopup(popup_325c72afe4c6b90c46c4253b60701e08)
+        ;
+
+        
+    
+    
+            circle_marker_f3040d4d4bbeeac57c0e611b1b216e58.bindTooltip(
+                `<div>
+                     Budapest (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a9409c75a37e8ea2a75c1fbecb201c4 = L.circleMarker(
+                [50.4367166, 5.970040310059851],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_a47884d72e1aa87641ffbe1d1fce09a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4fefacffa334f400c98169641edd09fe = $(`<div id="html_4fefacffa334f400c98169641edd09fe" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Belgium<br>     <b>City:</b> Spa-Francorchamps<br>     <b>Official Event Name:</b> FORMULA 1 ROLEX BELGIAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-07-28 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_a47884d72e1aa87641ffbe1d1fce09a3.setContent(html_4fefacffa334f400c98169641edd09fe);
+            
+        
+
+        circle_marker_8a9409c75a37e8ea2a75c1fbecb201c4.bindPopup(popup_a47884d72e1aa87641ffbe1d1fce09a3)
+        ;
+
+        
+    
+    
+            circle_marker_8a9409c75a37e8ea2a75c1fbecb201c4.bindTooltip(
+                `<div>
+                     Spa-Francorchamps (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_307911c56e9af16ec835b20cd473ca0d = L.circleMarker(
+                [52.3719838, 4.5302209],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_47dd8ebbcb17c0635f79e7c9ad5120fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b5a54c6821e5fedbc743cf9bca6198fa = $(`<div id="html_b5a54c6821e5fedbc743cf9bca6198fa" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Netherlands<br>     <b>City:</b> Zandvoort<br>     <b>Official Event Name:</b> FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2024<br>     <b>Date:</b> 2024-08-25 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_47dd8ebbcb17c0635f79e7c9ad5120fe.setContent(html_b5a54c6821e5fedbc743cf9bca6198fa);
+            
+        
+
+        circle_marker_307911c56e9af16ec835b20cd473ca0d.bindPopup(popup_47dd8ebbcb17c0635f79e7c9ad5120fe)
+        ;
+
+        
+    
+    
+            circle_marker_307911c56e9af16ec835b20cd473ca0d.bindTooltip(
+                `<div>
+                     Zandvoort (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7c4af4f52ce7aa4493a7b553ded5402 = L.circleMarker(
+                [45.6395418, 9.278830418070044],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_a317384023d1659a82c0064425e1fe15 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_59205a57db788092b03b966037a993ab = $(`<div id="html_59205a57db788092b03b966037a993ab" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Italy<br>     <b>City:</b> Monza<br>     <b>Official Event Name:</b> FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2024<br>     <b>Date:</b> 2024-09-01 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_a317384023d1659a82c0064425e1fe15.setContent(html_59205a57db788092b03b966037a993ab);
+            
+        
+
+        circle_marker_a7c4af4f52ce7aa4493a7b553ded5402.bindPopup(popup_a317384023d1659a82c0064425e1fe15)
+        ;
+
+        
+    
+    
+            circle_marker_a7c4af4f52ce7aa4493a7b553ded5402.bindTooltip(
+                `<div>
+                     Monza (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03070530ba08935213ac71e2d20b4244 = L.circleMarker(
+                [40.3755885, 49.8328009],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_7a06a59c6ce9fd69ddc1f5025509d10d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_74f7170d665c8fcc83793e466c4cf570 = $(`<div id="html_74f7170d665c8fcc83793e466c4cf570" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Azerbaijan<br>     <b>City:</b> Baku<br>     <b>Official Event Name:</b> FORMULA 1 QATAR AIRWAYS AZERBAIJAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-09-15 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_7a06a59c6ce9fd69ddc1f5025509d10d.setContent(html_74f7170d665c8fcc83793e466c4cf570);
+            
+        
+
+        circle_marker_03070530ba08935213ac71e2d20b4244.bindPopup(popup_7a06a59c6ce9fd69ddc1f5025509d10d)
+        ;
+
+        
+    
+    
+            circle_marker_03070530ba08935213ac71e2d20b4244.bindTooltip(
+                `<div>
+                     Baku (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2c396f62aabc3f85eaa75d4051728d8 = L.circleMarker(
+                [1.277658, 103.8536866],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_3a49f992705832b415922c7e2719f4f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf8af58f7d389fd36c28a741a9fc46ce = $(`<div id="html_cf8af58f7d389fd36c28a741a9fc46ce" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Singapore<br>     <b>City:</b> Marina Bay<br>     <b>Official Event Name:</b> FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2024<br>     <b>Date:</b> 2024-09-22 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_3a49f992705832b415922c7e2719f4f7.setContent(html_cf8af58f7d389fd36c28a741a9fc46ce);
+            
+        
+
+        circle_marker_e2c396f62aabc3f85eaa75d4051728d8.bindPopup(popup_3a49f992705832b415922c7e2719f4f7)
+        ;
+
+        
+    
+    
+            circle_marker_e2c396f62aabc3f85eaa75d4051728d8.bindTooltip(
+                `<div>
+                     Marina Bay (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_272ff8bf88aea7df9182180384702e01 = L.circleMarker(
+                [19.4326296, -99.1331785],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_67a58c782487c8143622ee311629aaee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4103af27332da3fd38a34d3d8167a12 = $(`<div id="html_e4103af27332da3fd38a34d3d8167a12" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Mexico<br>     <b>City:</b> Mexico City<br>     <b>Official Event Name:</b> FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2024<br>     <b>Date:</b> 2024-10-27 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_67a58c782487c8143622ee311629aaee.setContent(html_e4103af27332da3fd38a34d3d8167a12);
+            
+        
+
+        circle_marker_272ff8bf88aea7df9182180384702e01.bindPopup(popup_67a58c782487c8143622ee311629aaee)
+        ;
+
+        
+    
+    
+            circle_marker_272ff8bf88aea7df9182180384702e01.bindTooltip(
+                `<div>
+                     Mexico City (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3be74114ba9a9472e16ed87fd58e4ee1 = L.circleMarker(
+                [36.1699, -115.1398],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_5cc0b35b22543f3d2d022cb2d87b1a1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cd9f7cf1b22819ad7b057e17ee947db5 = $(`<div id="html_cd9f7cf1b22819ad7b057e17ee947db5" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> United States<br>     <b>City:</b> Las Vegas<br>     <b>Official Event Name:</b> FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024<br>     <b>Date:</b> 2024-11-23 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_5cc0b35b22543f3d2d022cb2d87b1a1b.setContent(html_cd9f7cf1b22819ad7b057e17ee947db5);
+            
+        
+
+        circle_marker_3be74114ba9a9472e16ed87fd58e4ee1.bindPopup(popup_5cc0b35b22543f3d2d022cb2d87b1a1b)
+        ;
+
+        
+    
+    
+            circle_marker_3be74114ba9a9472e16ed87fd58e4ee1.bindTooltip(
+                `<div>
+                     Las Vegas (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53f48b059840456d19cbbc7ed2ebb4fe = L.circleMarker(
+                [24.48640395, 54.609071208669036],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_079bd85861b6034fd23ec6c3f212eef8);
+        
+    
+        var popup_34e3b8d0b5e6cf5f20ba6c2b4042be7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43f36160921ad9965cc0be6da318f302 = $(`<div id="html_43f36160921ad9965cc0be6da318f302" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> United Arab Emirates<br>     <b>City:</b> Yas Island<br>     <b>Official Event Name:</b> FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2024<br>     <b>Date:</b> 2024-12-08 00:00:00<br>     <b>Event Type:</b> Race     </div>`)[0];
+                popup_34e3b8d0b5e6cf5f20ba6c2b4042be7d.setContent(html_43f36160921ad9965cc0be6da318f302);
+            
+        
+
+        circle_marker_53f48b059840456d19cbbc7ed2ebb4fe.bindPopup(popup_34e3b8d0b5e6cf5f20ba6c2b4042be7d)
+        ;
+
+        
+    
+    
+            circle_marker_53f48b059840456d19cbbc7ed2ebb4fe.bindTooltip(
+                `<div>
+                     Yas Island (Race)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_079bd85861b6034fd23ec6c3f212eef8.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+    
+            var feature_group_22d02776afa27a063b27c0da54d58a59 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_bb83dbc07175bdd690b2063792590484 = L.circleMarker(
+                [31.2243, 121.4691],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_ff6cd1eb37263f05f2f5a7b5bf1aeba7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04a5de2ce8ee4c0ae3dc8e5d53226e9f = $(`<div id="html_04a5de2ce8ee4c0ae3dc8e5d53226e9f" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> China<br>     <b>City:</b> Shanghai<br>     <b>Official Event Name:</b> FORMULA 1 LENOVO CHINESE GRAND PRIX 2024<br>     <b>Date:</b> 2024-04-21 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_ff6cd1eb37263f05f2f5a7b5bf1aeba7.setContent(html_04a5de2ce8ee4c0ae3dc8e5d53226e9f);
+            
+        
+
+        circle_marker_bb83dbc07175bdd690b2063792590484.bindPopup(popup_ff6cd1eb37263f05f2f5a7b5bf1aeba7)
+        ;
+
+        
+    
+    
+            circle_marker_bb83dbc07175bdd690b2063792590484.bindTooltip(
+                `<div>
+                     Shanghai (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60b656594bb00410dd8bde244b43042b = L.circleMarker(
+                [25.7741728, -80.19362],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_099d71b9051195022e096766458b1a72 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9f2522e551633f5deebddf0a736ae059 = $(`<div id="html_9f2522e551633f5deebddf0a736ae059" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> United States<br>     <b>City:</b> Miami<br>     <b>Official Event Name:</b> FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2024<br>     <b>Date:</b> 2024-05-05 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_099d71b9051195022e096766458b1a72.setContent(html_9f2522e551633f5deebddf0a736ae059);
+            
+        
+
+        circle_marker_60b656594bb00410dd8bde244b43042b.bindPopup(popup_099d71b9051195022e096766458b1a72)
+        ;
+
+        
+    
+    
+            circle_marker_60b656594bb00410dd8bde244b43042b.bindTooltip(
+                `<div>
+                     Miami (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e9ff05b83255629071003a6d57ce31f = L.circleMarker(
+                [47.2122736, 14.7857412],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_496d7b8bf97455cb5488ba321a53d381 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99279d8e3fe302db90140e91e363eb09 = $(`<div id="html_99279d8e3fe302db90140e91e363eb09" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Austria<br>     <b>City:</b> Spielberg<br>     <b>Official Event Name:</b> FORMULA 1 QATAR AIRWAYS AUSTRIAN GRAND PRIX 2024<br>     <b>Date:</b> 2024-06-30 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_496d7b8bf97455cb5488ba321a53d381.setContent(html_99279d8e3fe302db90140e91e363eb09);
+            
+        
+
+        circle_marker_9e9ff05b83255629071003a6d57ce31f.bindPopup(popup_496d7b8bf97455cb5488ba321a53d381)
+        ;
+
+        
+    
+    
+            circle_marker_9e9ff05b83255629071003a6d57ce31f.bindTooltip(
+                `<div>
+                     Spielberg (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca87be7514f84110a2cba56ba847b51a = L.circleMarker(
+                [30.2711286, -97.7436995],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_dae49f95123ac9da1f91420f8803b793 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e53d7659a2d9ad09b866b619263d46d8 = $(`<div id="html_e53d7659a2d9ad09b866b619263d46d8" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> United States<br>     <b>City:</b> Austin<br>     <b>Official Event Name:</b> FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2024<br>     <b>Date:</b> 2024-10-20 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_dae49f95123ac9da1f91420f8803b793.setContent(html_e53d7659a2d9ad09b866b619263d46d8);
+            
+        
+
+        circle_marker_ca87be7514f84110a2cba56ba847b51a.bindPopup(popup_dae49f95123ac9da1f91420f8803b793)
+        ;
+
+        
+    
+    
+            circle_marker_ca87be7514f84110a2cba56ba847b51a.bindTooltip(
+                `<div>
+                     Austin (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e379c2d95225a21086e31cba1a4ea52 = L.circleMarker(
+                [-23.5506507, -46.6333824],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_08d07d5145b206767570ea35377b4f8b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d93198f2f939504b4ee3ade5f51b203 = $(`<div id="html_9d93198f2f939504b4ee3ade5f51b203" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Brazil<br>     <b>City:</b> São Paulo<br>     <b>Official Event Name:</b> FORMULA 1 LENOVO GRANDE PRÊMIO DE SÃO PAULO 2024<br>     <b>Date:</b> 2024-11-03 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_08d07d5145b206767570ea35377b4f8b.setContent(html_9d93198f2f939504b4ee3ade5f51b203);
+            
+        
+
+        circle_marker_7e379c2d95225a21086e31cba1a4ea52.bindPopup(popup_08d07d5145b206767570ea35377b4f8b)
+        ;
+
+        
+    
+    
+            circle_marker_7e379c2d95225a21086e31cba1a4ea52.bindTooltip(
+                `<div>
+                     São Paulo (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6ba586101cdf9c790210a2b38e902fa = L.circleMarker(
+                [25.4228888, 51.5197163],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_22d02776afa27a063b27c0da54d58a59);
+        
+    
+        var popup_7c2c4da386482f8bde0d5a691ebf94f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61720e06a6e401f4d38c9b37984bca38 = $(`<div id="html_61720e06a6e401f4d38c9b37984bca38" style="width: 100.0%; height: 100.0%;">     <b>Country:</b> Qatar<br>     <b>City:</b> Lusail<br>     <b>Official Event Name:</b> FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2024<br>     <b>Date:</b> 2024-12-01 00:00:00<br>     <b>Event Type:</b> Race + Sprint     </div>`)[0];
+                popup_7c2c4da386482f8bde0d5a691ebf94f3.setContent(html_61720e06a6e401f4d38c9b37984bca38);
+            
+        
+
+        circle_marker_a6ba586101cdf9c790210a2b38e902fa.bindPopup(popup_7c2c4da386482f8bde0d5a691ebf94f3)
+        ;
+
+        
+    
+    
+            circle_marker_a6ba586101cdf9c790210a2b38e902fa.bindTooltip(
+                `<div>
+                     Lusail (Race + Sprint)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_22d02776afa27a063b27c0da54d58a59.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+    
+            var layer_control_992a31e2c3b23cb0bc2e456c2b051ce7_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d96a7e97f6a1b8101cd992807d32e3e9,
+                },
+                overlays :  {
+                    "Race Locations" : feature_group_079bd85861b6034fd23ec6c3f212eef8,
+                    "Race + Sprint Locations" : feature_group_22d02776afa27a063b27c0da54d58a59,
+                },
+            };
+            let layer_control_992a31e2c3b23cb0bc2e456c2b051ce7 = L.control.layers(
+                layer_control_992a31e2c3b23cb0bc2e456c2b051ce7_layers.base_layers,
+                layer_control_992a31e2c3b23cb0bc2e456c2b051ce7_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+
+        
+    
+            tile_layer_d96a7e97f6a1b8101cd992807d32e3e9.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+    
+            feature_group_079bd85861b6034fd23ec6c3f212eef8.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+    
+            feature_group_22d02776afa27a063b27c0da54d58a59.addTo(map_69bbdc26a9579cdf7c22fd4444fb1b84);
+        
+</script>
+</html>

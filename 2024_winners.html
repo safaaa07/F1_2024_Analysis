@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2024 Winners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            flex: 1 1 calc(23% - 10px); /* Ensure 4 cards per row */
+            max-width: calc(23% - 10px);
+            border-radius: 10px;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative; /* For the hover effect */
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+        .card h2 {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        .card p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .card p.driver-number {
+            font-weight: bold;
+            text-align: center;
+        }
+        .hover-popup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+        .card:hover .hover-popup {
+            opacity: 1; /* Show popup on hover */
+        }
+        .hover-popup p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .title {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="title">F1 2024 Race & Sprint Winners</h3>
+    <div class="container">
+
+    <div class="card" style="background-color: #0600ef">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png">
+        <h2>M VERSTAPPEN</h2>
+        <p class="driver-number">Driver Number: 1</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 9</p>
+            <p>Sprint Wins: 3</p>
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #ff8000">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/1col/image.png">
+        <h2>L NORRIS</h2>
+        <p class="driver-number">Driver Number: 4</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 4</p>
+            <p>Sprint Wins: 1</p>
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #e8002d">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/1col/image.png">
+        <h2>C LECLERC</h2>
+        <p class="driver-number">Driver Number: 16</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 3</p>
+            <p>Sprint Wins: 1</p>
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #27f4d2">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/1col/image.png">
+        <h2>L HAMILTON</h2>
+        <p class="driver-number">Driver Number: 44</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 2</p>
+            
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #e8002d">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CARSAI01_Carlos_Sainz/carsai01.png.transform/1col/image.png">
+        <h2>C SAINZ</h2>
+        <p class="driver-number">Driver Number: 55</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 2</p>
+            
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #27f4d2">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/1col/image.png">
+        <h2>G RUSSELL</h2>
+        <p class="driver-number">Driver Number: 63</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 2</p>
+            <p>Sprint Wins: 1</p>
+        </div>
+    
+    </div>
+    
+    <div class="card" style="background-color: #ff8000">
+        <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png.transform/1col/image.png">
+        <h2>O PIASTRI</h2>
+        <p class="driver-number">Driver Number: 81</p>
+        
+        <div class="hover-popup">
+            <p>Race Wins: 2</p>
+            
+        </div>
+    
+    </div>
+    
+    </div>
+</body>
+</html>
