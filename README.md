@@ -70,7 +70,7 @@ Some possible enhancements:
 - Overtakes & race strategy insights.
 - Interactive dashboard integration.
 
-## Author & Contact
+## 👩‍💻 Author & Contact
 🔗 **GitHub:** [Safaa Allamy](https://github.com/safaaa07)<br>
 📧 **Email:** [allamy.safaa@gmail.com](mailto:allamy.safaa@gmail.com)<br>
 💼 **LinkedIn:** [Safaa Allamy](https://www.linkedin.com/in/safaa-allamy/)<br>
